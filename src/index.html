@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head> 
+        <meta charset = "UTF-8" />
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="style.css" />
+        <title> Parabubbles Time Machine! </title>
+
+        <style>
+            .clock {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+            .digit, .colon {
+                width: 50px;
+                height: 80px;
+            }
+            .blinking-colon {
+                animation: blink 1s step-start infinite;
+            }
+            @keyframes blink {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Timer Section -->
+        <h1 style="color:rgb(118, 239, 66);" sclass="tit" id ="title">Parabubbles Time Machine!</h1>
+    
+        <div class="clock" id="countdownDisplay">
+            <img id="min1" class="digit" src="assets/numbers/0.png">
+            <img id="min2" class="digit" src="assets/numbers/0.png">
+            <img class="colon" src="assets/Nums_Timer 11.png">
+            <img id="sec1" class="digit" src="assets/numbers/0.png">
+            <img id="sec2" class="digit" src="assets/numbers/0.png">
+        </div>
+
+
+        <div class="inputs">
+            <input type="number" id ="time-input" placeholder = "Enter sec" /> 
+            <button class = "btn" id = "start-btn">Start</button>
+        </div>
+
+        <form id="timerForm">
+            <label>Enter time (HH:MM:SS):</label>
+            <input type="text" id="timeInput" placeholder="01:30">
+            <button type="submit">Start</button>
+        </form>
+
+        <script src="renderer.js"></script> 
+    </body>
+</html>
